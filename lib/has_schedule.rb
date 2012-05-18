@@ -10,7 +10,7 @@ module HasSchedule
 			send :include, InstanceMethods
 
 			alias_method_chain :reload, :schedule
-			before_save :save_with_schedule
+			before_validation :save_with_schedule
 		end
 	end
 
